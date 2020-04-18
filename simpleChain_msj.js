@@ -29,8 +29,8 @@ class Block {
 		// Example: this.hash = "";
 		this.hash = "",
 		this.height = 0,
-		this.body = data,
-		this.time = 0,
+		this.data = data,
+		this.timeStamp = "",
 		this.previousBlockHash = ""
 	}
 }
@@ -50,6 +50,12 @@ class Blockchain{
 	}
 
 	addBlock(newBlock){
+		/* 
+			Adding height and timestamp
+		*/
+		newBlock.height = this.chain.length;
+		newBlock.time = new Date().getTime().toString.slice(0,-3);
+		
 		// Creating hash first
 		newBlock.hash = SHA256(JSON.stringify(newBlock)).toString();
 
@@ -63,5 +69,3 @@ class Blockchain{
 		this.chain.push(newBlock);
 	}
 }
-
-module.exports.Block = Block;
