@@ -7,11 +7,11 @@ Sample code to create a very basic private BlockChain using NodeJs
 2. Copy-paste code into terminal (You may want to remove comments before doing so)
 3. Add block by instantiating blockchain, then adding blocks to it:
 			
-	// Instantiating new BlockChain
+	// Instantiating new BlockChain <br>
 	`blockchain = new BlockChain()`
 
-	// Need to instantiate new Block when adding to a BlockChain
+	// Need to instantiate new Block when adding to a BlockChain <br>
 	`blockchain.addBlock(new Block('Whatever goes in here'))`
 
-	// To view
+	// To view <br>
 	`blockchain.chain`
